@@ -15,7 +15,25 @@ migration:
     - platform: root
       create_revision: f70176fc5fb58d34132bb921b0a725e5be66b873
       base_revision: f70176fc5fb58d34132bb921b0a725e5be66b873
+    - platform: android
+      create_revision: f70176fc5fb58d34132bb921b0a725e5be66b873
+      base_revision: f70176fc5fb58d34132bb921b0a725e5be66b873
+    - platform: ios
+      create_revision: f70176fc5fb58d34132bb921b0a725e5be66b873
+      base_revision: f70176fc5fb58d34132bb921b0a725e5be66b873
+    - platform: linux
+      create_revision: f70176fc5fb58d34132bb921b0a725e5be66b873
+      base_revision: f70176fc5fb58d34132bb921b0a725e5be66b873
+    - platform: macos
+      create_revision: f70176fc5fb58d34132bb921b0a725e5be66b873
+      base_revision: f70176fc5fb58d34132bb921b0a725e5be66b873
     - platform: web
+      create_revision: f70176fc5fb58d34132bb921b0a725e5be66b873
+      base_revision: f70176fc5fb58d34132bb921b0a725e5be66b873
+    - platform: windows
+      create_revision: f70176fc5fb58d34132bb921b0a725e5be66b873
+      base_revision: f70176fc5fb58d34132bb921b0a725e5be66b873
+    - platform: ohos
       create_revision: f70176fc5fb58d34132bb921b0a725e5be66b873
       base_revision: f70176fc5fb58d34132bb921b0a725e5be66b873
 
