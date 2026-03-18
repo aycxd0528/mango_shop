@@ -152,9 +152,9 @@ class _MgsuggestionState extends State<Mgsuggestion> {
             physics: NeverScrollableScrollPhysics(),
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
-              mainAxisSpacing: 16,
-              crossAxisSpacing: 16,
-              childAspectRatio: 0.9,
+              mainAxisSpacing: 12,
+              crossAxisSpacing: 12,
+              childAspectRatio: 0.85,
             ),
             itemCount: _suggestedProducts.length,
             itemBuilder: (context, index) {
@@ -193,7 +193,7 @@ class _MgsuggestionState extends State<Mgsuggestion> {
                       child: Column(
                         children: [
                           Container(
-                            height: 140,
+                            height: 120,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
                               image: DecorationImage(
@@ -210,8 +210,8 @@ class _MgsuggestionState extends State<Mgsuggestion> {
                                     left: 8,
                                     child: Container(
                                       padding: EdgeInsets.symmetric(
-                                        horizontal: 8,
-                                        vertical: 4,
+                                        horizontal: 6,
+                                        vertical: 3,
                                       ),
                                       decoration: BoxDecoration(
                                         color: Colors.orange.withOpacity(0.9),
@@ -221,7 +221,7 @@ class _MgsuggestionState extends State<Mgsuggestion> {
                                         (product['tags'] as List)[0],
                                         style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: 10,
+                                          fontSize: 9,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -234,7 +234,7 @@ class _MgsuggestionState extends State<Mgsuggestion> {
                                     right: 8,
                                     child: Container(
                                       padding: EdgeInsets.symmetric(
-                                        horizontal: 8,
+                                        horizontal: 6,
                                         vertical: 2,
                                       ),
                                       decoration: BoxDecoration(
@@ -246,14 +246,14 @@ class _MgsuggestionState extends State<Mgsuggestion> {
                                           Icon(
                                             Icons.star,
                                             color: Colors.yellow,
-                                            size: 10,
+                                            size: 9,
                                           ),
                                           SizedBox(width: 2),
                                           Text(
                                             '${product['rating']}',
                                             style: TextStyle(
                                               color: Colors.white,
-                                              fontSize: 10,
+                                              fontSize: 9,
                                               fontWeight: FontWeight.bold,
                                             ),
                                           ),
@@ -265,49 +265,51 @@ class _MgsuggestionState extends State<Mgsuggestion> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.all(12),
+                            padding: EdgeInsets.all(8),
                             child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  product['name'],
-                                  style: AppTextStyles.bodyMedium.copyWith(
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                  maxLines: 2,
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                                SizedBox(height: 6),
-                                Row(
-                                  children: [
-                                    Text(
-                                      '¥${product['price']}',
-                                      style: AppTextStyles.price.copyWith(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    product['name'],
+                                    style: TextStyle(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
                                     ),
-                                    SizedBox(width: 6),
-                                    Text(
-                                      '¥${product['originalPrice']}',
-                                      style: TextStyle(
-                                        color: AppColors.textHint,
-                                        fontSize: 12,
-                                        decoration: TextDecoration.lineThrough,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 6),
-                                Text(
-                                  '已售${product['sales']}件',
-                                  style: TextStyle(
-                                    color: AppColors.textHint,
-                                    fontSize: 11,
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
                                   ),
-                                ),
-                              ],
-                            ),
+                                  SizedBox(height: 4),
+                                  Row(
+                                    children: [
+                                      Text(
+                                        '¥${product['price']}',
+                                        style: TextStyle(
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.red,
+                                        ),
+                                      ),
+                                      SizedBox(width: 4),
+                                      Text(
+                                        '¥${product['originalPrice']}',
+                                        style: TextStyle(
+                                          color: AppColors.textHint,
+                                          fontSize: 10,
+                                          decoration: TextDecoration.lineThrough,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 4),
+                                  Text(
+                                    '已售${product['sales']}件',
+                                    style: TextStyle(
+                                      color: AppColors.textHint,
+                                      fontSize: 10,
+                                    ),
+                                  ),
+                                ],
+                              ),
                           ),
                         ],
                       ),

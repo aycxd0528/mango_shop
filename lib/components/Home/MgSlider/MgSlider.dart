@@ -15,7 +15,7 @@ class _MgsliderState extends State<Mgslider> {
   late PageController _pageController;
   final List<String> _images = [
     'lib/assets/220c3184-fec6-4c46-8606-67015ed201cc.png',
-    'lib/assets/爱吃大芒果.png',
+    'lib/assets/52da9c14-9404-4e4d-83a1-4a294050350f.png',
     'lib/assets/220c3184-fec6-4c46-8606-67015ed201cc.png',
   ];
 

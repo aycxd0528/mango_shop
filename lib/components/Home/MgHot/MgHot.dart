@@ -102,7 +102,7 @@ class _MghotState extends State<Mghot> {
           ),
           SizedBox(height: 20),
           Container(
-            height: 280,
+            height: 260,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: _hotProducts.length,
@@ -123,7 +123,7 @@ class _MghotState extends State<Mghot> {
                       duration: Duration(milliseconds: 200),
                       scale: 1.0,
                       child: Container(
-                        width: 160,
+                        width: 150,
                         margin: EdgeInsets.only(right: 16),
                         decoration: BoxDecoration(
                           color: AppColors.white,
@@ -144,7 +144,7 @@ class _MghotState extends State<Mghot> {
                         child: Column(
                           children: [
                             Container(
-                              height: 160,
+                              height: 140,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
                                 image: DecorationImage(
@@ -161,8 +161,8 @@ class _MghotState extends State<Mghot> {
                                       left: 8,
                                       child: Container(
                                         padding: EdgeInsets.symmetric(
-                                          horizontal: 8,
-                                          vertical: 4,
+                                          horizontal: 6,
+                                          vertical: 3,
                                         ),
                                         decoration: BoxDecoration(
                                           color: Colors.red.withOpacity(0.9),
@@ -172,7 +172,7 @@ class _MghotState extends State<Mghot> {
                                           (_hotProducts[index]['tags'] as List)[0],
                                           style: TextStyle(
                                             color: Colors.white,
-                                            fontSize: 10,
+                                            fontSize: 9,
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
@@ -182,45 +182,47 @@ class _MghotState extends State<Mghot> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.all(12),
+                              padding: EdgeInsets.all(10),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
                                     _hotProducts[index]['name'],
-                                    style: AppTextStyles.bodyMedium.copyWith(
+                                    style: TextStyle(
+                                      fontSize: 14,
                                       fontWeight: FontWeight.w500,
                                     ),
                                     maxLines: 2,
                                     overflow: TextOverflow.ellipsis,
                                   ),
-                                  SizedBox(height: 6),
+                                  SizedBox(height: 4),
                                   Row(
                                     children: [
                                       Text(
                                         '¥${_hotProducts[index]['price']}',
-                                        style: AppTextStyles.price.copyWith(
-                                          fontSize: 16,
+                                        style: TextStyle(
+                                          fontSize: 14,
                                           fontWeight: FontWeight.bold,
+                                          color: Colors.red,
                                         ),
                                       ),
-                                      SizedBox(width: 6),
+                                      SizedBox(width: 4),
                                       Text(
                                         '¥${_hotProducts[index]['originalPrice']}',
                                         style: TextStyle(
                                           color: AppColors.textHint,
-                                          fontSize: 12,
+                                          fontSize: 10,
                                           decoration: TextDecoration.lineThrough,
                                         ),
                                       ),
                                     ],
                                   ),
-                                  SizedBox(height: 6),
+                                  SizedBox(height: 4),
                                   Text(
                                     '已售${_hotProducts[index]['sales']}件',
                                     style: TextStyle(
                                       color: AppColors.textHint,
-                                      fontSize: 11,
+                                      fontSize: 10,
                                     ),
                                   ),
                                 ],

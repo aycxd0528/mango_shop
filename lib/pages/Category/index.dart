@@ -389,42 +389,41 @@ class _categoryViewState extends State<categoryView> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               // 商品图片
-                              Expanded(
-                                child: Container(
-                                  width: double.infinity,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.vertical(top: Radius.circular(8)),
-                                    image: DecorationImage(
-                                      image: AssetImage(product['image']),
-                                      fit: BoxFit.cover,
-                                    ),
+                              Container(
+                                height: 90,
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.vertical(top: Radius.circular(8)),
+                                  image: DecorationImage(
+                                    image: AssetImage(product['image']),
+                                    fit: BoxFit.cover,
                                   ),
                                 ),
                               ),
                               // 商品信息
                               Padding(
-                                padding: EdgeInsets.all(12),
+                                padding: EdgeInsets.all(6),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
                                       product['name'],
                                       style: TextStyle(
-                                        fontSize: 14,
+                                        fontSize: 10,
                                         color: Colors.grey[800],
                                         fontWeight: FontWeight.w500,
                                       ),
                                       maxLines: 2,
                                       overflow: TextOverflow.ellipsis,
                                     ),
-                                    SizedBox(height: 8),
+                                    SizedBox(height: 2),
                                     Row(
                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Text(
                                           '¥${product['price']}',
                                           style: TextStyle(
-                                            fontSize: 16,
+                                            fontSize: 12,
                                             color: Colors.red,
                                             fontWeight: FontWeight.bold,
                                           ),
@@ -434,15 +433,15 @@ class _categoryViewState extends State<categoryView> {
                                             _addToCart(product);
                                           },
                                           child: Container(
-                                            padding: EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                                            padding: EdgeInsets.symmetric(horizontal: 5, vertical: 1),
                                             decoration: BoxDecoration(
                                               color: Colors.red,
-                                              borderRadius: BorderRadius.circular(12),
+                                              borderRadius: BorderRadius.circular(5),
                                             ),
                                             child: Text(
                                               '加入购物车',
                                               style: TextStyle(
-                                                fontSize: 12,
+                                                fontSize: 7,
                                                 color: Colors.white,
                                                 fontWeight: FontWeight.w500,
                                               ),
