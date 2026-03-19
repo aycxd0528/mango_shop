@@ -132,7 +132,7 @@ class _CartViewState extends State<CartView> {
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: Text('取消'),
+              child: Text('取消', style: TextStyle(color: Colors.grey[600])),
             ),
             TextButton(
               onPressed: () {
@@ -365,7 +365,7 @@ class _CartViewState extends State<CartView> {
                     ),
                     Text(
                       '已选 ${_selectedCount} 件商品',
-                      style: TextStyle(fontSize: 12, color: Colors.grey),
+                      style: TextStyle(fontSize: 12, color: Colors.grey[600]),
                     ),
                   ],
                 ),
@@ -386,9 +386,9 @@ class _CartViewState extends State<CartView> {
                                   mainAxisSize: MainAxisSize.min,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text('共 ${_selectedCount} 件商品'),
+                                    Text('共 ${_selectedCount} 件商品', style: TextStyle(color: Colors.grey[700])),
                                     SizedBox(height: 8),
-                                    Text('合计：¥${_totalPrice.toStringAsFixed(2)}'),
+                                    Text('合计：¥${_totalPrice.toStringAsFixed(2)}', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.red)),
                                   ],
                                 ),
                                 actions: [
@@ -396,7 +396,7 @@ class _CartViewState extends State<CartView> {
                                     onPressed: () {
                                       Navigator.of(context).pop();
                                     },
-                                    child: Text('取消'),
+                                    child: Text('取消', style: TextStyle(color: Colors.grey[600])),
                                     style: TextButton.styleFrom(
                                       padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                                     ),
@@ -409,7 +409,7 @@ class _CartViewState extends State<CartView> {
                                         SnackBar(content: Text('结算成功！')),
                                       );
                                     },
-                                    child: Text('确认结算', style: AppTextStyles.bodyMedium.copyWith(color: AppColors.primary, fontWeight: FontWeight.w600)),
+                                    child: Text('确认结算', style: TextStyle(fontSize: 14, color: Colors.red, fontWeight: FontWeight.w600)),
                                   ),
                                 ],
                               );
@@ -417,7 +417,7 @@ class _CartViewState extends State<CartView> {
                           );
                         }
                       : null,
-                  child: Text('结算'),
+                  child: Text('结算 ${_selectedCount}', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.white)),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.red,
                     padding: EdgeInsets.symmetric(horizontal: 32, vertical: 12),

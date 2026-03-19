@@ -104,7 +104,7 @@ class _PendingShipmentOrdersState extends State<PendingShipmentOrders> {
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: Text('取消'),
+              child: Text('取消', style: TextStyle(color: Colors.grey[600])),
             ),
             TextButton(
               onPressed: () {
@@ -287,7 +287,8 @@ class _PendingShipmentOrdersState extends State<PendingShipmentOrders> {
       appBar: AppBar(
         title: Text('待发货'),
         centerTitle: true,
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.white,
+        elevation: 1,
       ),
       body: _pendingShipmentOrders.isEmpty
           ? Center(

@@ -104,7 +104,7 @@ class _PendingPaymentOrdersState extends State<PendingPaymentOrders> {
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: Text('取消'),
+              child: Text('取消', style: TextStyle(color: Colors.grey[600])),
             ),
             TextButton(
               onPressed: () {
@@ -141,7 +141,7 @@ class _PendingPaymentOrdersState extends State<PendingPaymentOrders> {
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: Text('不取消'),
+              child: Text('不取消', style: TextStyle(color: Colors.grey[600])),
             ),
             TextButton(
               onPressed: () {

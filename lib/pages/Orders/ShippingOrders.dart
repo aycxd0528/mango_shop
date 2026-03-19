@@ -104,7 +104,7 @@ class _ShippingOrdersState extends State<ShippingOrders> {
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: Text('取消'),
+              child: Text('取消', style: TextStyle(color: Colors.grey[600])),
             ),
             TextButton(
               onPressed: () {
